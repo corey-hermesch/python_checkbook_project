@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[232]:
+# In[1]:
 
 
 # Python Checkbook Project
@@ -24,7 +24,7 @@ import subprocess
 balance_file_name = 'balance.txt'
 
 
-# In[233]:
+# In[2]:
 
 
 def menu_input():
@@ -48,7 +48,7 @@ def menu_input():
             print("That choice is invalid. Please make a valid selection 1-4\n")
 
 
-# In[234]:
+# In[3]:
 
 
 def write_balance(new_bal_str):
@@ -64,7 +64,7 @@ def write_balance(new_bal_str):
         
 
 
-# In[235]:
+# In[4]:
 
 
 def read_balance():
@@ -77,7 +77,7 @@ def read_balance():
     return cur_bal_str
 
 
-# In[236]:
+# In[6]:
 
 
 def get_valid_money(amount_str):
@@ -117,7 +117,7 @@ def get_valid_money(amount_str):
             # after the decimal point, I want exactly two characters. 
             # If there are more than two -> invalid input; if only one, I add a '0' 
             amount_str = str(float_amount)
-            if amount_str.index('.') < len(amount_str) - 2:
+            if amount_str.index('.') < len(amount_str) - 3:
                 amount_str = input("Invalid entry. Please enter a valid dollar amount (dd.dd):")
                 continue
             elif amount_str.index('.') == len(amount_str) - 2:
@@ -128,8 +128,12 @@ def get_valid_money(amount_str):
             amount_str = input("Invalid entry. Please enter a valid dollar amount (dd.dd):")
     return amount_str
 
+x = '75.69'
+print(x)
+print (get_valid_money(x))
 
-# In[237]:
+
+# In[7]:
 
 
 def debit():
@@ -159,7 +163,7 @@ def debit():
     return
 
 
-# In[238]:
+# In[8]:
 
 
 def credit():
@@ -180,7 +184,7 @@ def credit():
     return
 
 
-# In[239]:
+# In[9]:
 
 
 ## main program block
@@ -204,13 +208,13 @@ while True:
         break
 
 
-# In[231]:
+# In[ ]:
 
 
 # functions below were rejected or still in test
 
 
-# In[240]:
+# In[ ]:
 
 
 # def get_valid_money_1(amount_str):
@@ -273,7 +277,7 @@ while True:
 #                 continue
 
 
-# In[241]:
+# In[ ]:
 
 
 # def get_valid_money3(amount_str):
